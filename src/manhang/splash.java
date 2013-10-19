@@ -20,7 +20,7 @@ public class splash {
         System.out.println("*                          A hangman game.                            *"); 
         System.out.println("*                                                                     *");  
         System.out.println("*         1-4 players, Easy, Medium, Hard difficulty                  *");
-        System.out.println("*               Guess a letter, find the word.                        *"); 
+        System.out.println("*               Guess a letter, find the word... or die.              *"); 
         System.out.println("***********************************************************************");   
         
     }
