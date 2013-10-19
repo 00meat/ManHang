@@ -13,7 +13,7 @@ public class splash {
      public static void splashScrene(){
         System.out.println("***********************************************************************"); 
         System.out.println("*                                                __                   *"); 
-        System.out.println("*   |\\    /|   /\\   |\\  |   |   |   /\\   |\\  |  /  \\                 *"); 
+        System.out.println("*   |\\    /|   /\\   |\\  |   |   |   /\\   |\\  |  /  \\                  *"); 
         System.out.println("*   | \\  / |  /--\\  | \\ |   |---|  /--\\  | \\ | |  __                  *"); 
         System.out.println("*   |  \\/  | /    \\ |  \\|   |   | /    \\ |  \\|  \\__/                  *"); 
         System.out.println("*                                                                     *"); 

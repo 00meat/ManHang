@@ -10,8 +10,15 @@ package manhang;
  */
 public class gameBoard {
     
+        public static void scoreBoard(int score, int playerID, int guessRight, int guessWrong){
+    System.out.println("Player #" + playerID);
+    System.out.println("Correct guesses:" + guessRight);
+    System.out.println("Inorrect guesses:" + guessWrong);
+    System.out.println("You have guessed " + (guessRight / (guessRight + guessWrong)*100) + "% correct."); 
+
+  }
     
-    public static void scoreboard(int score){
+    public static void hungMan(int score){
         
         switch (score) {
             case 0:     System.out.println("|--------    "); 
@@ -67,8 +74,11 @@ public class gameBoard {
                     start.startMenu();
                     break;
         }
-        
- 
+    }
+    
+
+  
+        public static void turnBoard(int score){
     System.out.println("Word:");
     System.out.println("_  _  _  _  _  _  _  _");
     System.out.println("Avalable:");
@@ -76,6 +86,4 @@ public class gameBoard {
     System.out.println("Wrong:");
     System.out.println("Q Z X LCF]");
   }
-  
-    
 }
