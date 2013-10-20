@@ -3,16 +3,17 @@
  * and open the template in the editor.
  */
 package manhang;
+import java.util.Scanner;
 /**
  *
  * @author Andrew
  */
 public class start {
         public static void startMenu() {
-     int input = 0;
+     
      System.out.println("Start Game = 1");
      System.out.println("Help Menu = 2");
-     input = getInput.number();
+     int input = getInput.number(2);
       
     switch (input) {
             case 1:  gameMenu.gameMenu();

@@ -22,11 +22,12 @@ public class gameMenu {
           int scoreWin = 0;
           int scoreLoose = 0;
         System.out.println("Please select difficulty 1-3");
-        difficulty = getInput.number();
+        difficulty = getInput.number(3);
         System.out.println("Number of players? 1-4");
-        players = getInput.number();
+        players = getInput.number(4);
         System.out.println("You selected " + difficulty + " difficulty with " + players + " players.");
         winloss = gameControl.game(players, difficulty);
+  
         switch (winloss) {
             case 0:     loss++; break;       
             case 1:     win++; break;}

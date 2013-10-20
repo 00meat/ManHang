@@ -17,7 +17,7 @@ public class helpControl {
      System.out.println("3 = Player Select");
      System.out.println("4 = Difficulty Select");
      System.out.println("5 = Return to Start");
-     inputHelp = getInput.number();
+     inputHelp = getInput.number(5);
  switch (inputHelp) {
             case 1:  helpDisplay.helpMenuView(inputHelp);
                      helpMenuControl();
