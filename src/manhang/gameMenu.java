@@ -13,7 +13,14 @@ public class gameMenu {
 
  public static void gameMenu() {
           // Start screen, select difficulty and player count.
-          int winloss = 0;
+ 
+          turnOptionMenu.turnControl();
+       
+ }
+    
+ 
+  public static void gameRun() {
+         int winloss = 0;
           int win = 0;
           int loss = 0;
           int percentage = 0;
@@ -21,7 +28,7 @@ public class gameMenu {
           int players = 1;
           int scoreWin = 0;
           int scoreLoose = 0;
-        System.out.println("Please select difficulty 1-3");
+      System.out.println("Please select difficulty 1-3");
         difficulty = getInput.number(3);
         System.out.println("Number of players? 1-4");
         players = getInput.number(4);
@@ -35,6 +42,5 @@ public class gameMenu {
      System.out.println("You have won " + win + " times and lost " + loss + " times, your percentage is " +
              percentage + "%");
      start.startMenu();
- }
-    
+  }
 }
