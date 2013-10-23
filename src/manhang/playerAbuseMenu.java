@@ -10,14 +10,13 @@ package manhang;
  */
 public class playerAbuseMenu {
         public static void playerAbuseControl() {
-     int inputAbuse = 0;
      System.out.println("Encouragment Menu:");
      System.out.println("1 = Gentle encouragment.");
      System.out.println("2 = Boost confidence");
      System.out.println("3 = Self worth enhancer");
      System.out.println("4 = Helpfull suggestion");
      System.out.println("5 = Return to Start");
-     inputAbuse = getInput.number(5);
+     int inputAbuse = getInput.number(5);
  switch (inputAbuse) {
             case 1:  abuseMenuView(inputAbuse);
                      playerAbuseControl();
