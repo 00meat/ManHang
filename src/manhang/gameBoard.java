@@ -79,8 +79,7 @@ public class gameBoard {
 
   
         public static void turnBoard(int score){
-    System.out.println("Word:");
-    System.out.println("_  _  _  _  _  _  _  _");
+    gameScoreControl.scoreBoard();
     System.out.println("Avalable:");
     System.out.println("A B C D E F G H I"); 
     System.out.println("Wrong:");

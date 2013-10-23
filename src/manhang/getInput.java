@@ -12,15 +12,16 @@ public class getInput {
  
     public static int number(int max) {
     int numberIn = 0;
-   Scanner scanNumber = new Scanner(System.in);
+   
     do {
+    Scanner scanNumber = new Scanner(System.in);    
     numberIn = scanNumber.nextInt(); } 
     while(validateNumber(numberIn, max) == false);
     return numberIn;
     }
 
         public static boolean validateNumber(int numberIn, int max) {
-                boolean valid = false;
+                boolean valid = false;// flag to indicate if valid character entered
             switch (numberIn) {
                 case 1:  valid = true; break;
                 case 2:  valid = true; break;
@@ -34,14 +35,11 @@ public class getInput {
                 case 0:  valid = true; break;    
            default:  System.out.println("Invalid number.");
                     number(max);
-                    break;
-        }
-            
+                    break; }
             if (numberIn > max){
                 valid = false;
              System.out.println("Invalid number.");
              number(max);}
-       
             if (numberIn < 0){
                 valid = false;
              System.out.println("Invalid number.");
