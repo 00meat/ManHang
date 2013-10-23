@@ -71,11 +71,11 @@ public class helpControl {
     int numberIn = 0;
    
     do {
-    Scanner scanNumber = new Scanner(System.in);    
-    numberIn = scanNumber.nextInt(); } 
-    while(validateAskNumber(numberIn, max) == false);
-    return numberIn;
-    }
+        Scanner scanNumber = new Scanner(System.in);    
+        numberIn = scanNumber.nextInt(); } 
+         while(validateAskNumber(numberIn, max) == false);
+         return numberIn;
+  }
 
         public static boolean validateAskNumber(int numberIn, int max) {
                 boolean valid = false;// flag to indicate if valid character entered

@@ -9,7 +9,7 @@ package manhang;
  * @author Andrew
  */
 public class turnOptionMenu {
-          public static void turnControl() {
+          public static void turnControl(int players, int difficulty) {
          int inputTurn = 0;
      System.out.println("Turn Options:");
      System.out.println("1 = Guess Letter.");
@@ -20,7 +20,7 @@ public class turnOptionMenu {
      inputTurn = getInput.number(5);
  switch (inputTurn) {
             case 1:  turnMenuView(inputTurn);
-                     gameMenu.gameRun();
+                     gameMenu.gameRun(players, difficulty);
                      break;
             case 2:  turnMenuView(inputTurn);
                     
@@ -44,7 +44,7 @@ public class turnOptionMenu {
                      break;
             case 2:  System.out.println("Not implemented.");
                      break;
-            case 4:  System.out.println("Not implemented.");
+            case 4:  System.out.println("Not implemented but select a player anyway.");
                        int PlayerNumber = getInput.number(4);
                     break;
             default:  System.out.println("Unrecognized Command, Please reastart program");
