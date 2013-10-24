@@ -40,7 +40,9 @@ public class turnOptionMenu {
     
          public static void turnMenuView(int inputTurn) {
  switch (inputTurn) {
-            case 1:  System.out.println("Not implemented.");
+            case 1:  System.out.println("Not implemented but type something anyway.");
+                        char guessed = askLetter.guess();
+                        System.out.println(guessed);
                      break;
             case 2:  System.out.println("Not implemented.");
                      break;
