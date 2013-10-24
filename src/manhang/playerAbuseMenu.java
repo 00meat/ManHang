@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package manhang;
-
+import java.util.Scanner;
 /**
  *
  * @author Andrew
@@ -16,7 +16,7 @@ public class playerAbuseMenu {
      System.out.println("3 = Self worth enhancer");
      System.out.println("4 = Helpful suggestion");
      System.out.println("5 = Return to Start");
-     int inputAbuse = getInput.number(5);
+     int inputAbuse = abuseNumber(5);
  
              if (inputAbuse == 1) {
             abuseMenuView(inputAbuse);
@@ -54,6 +54,41 @@ public class playerAbuseMenu {
         }
         }
     
-    
+     public static int abuseNumber(int max) {
+    int numberIn = 0;
+   
+    do {
+    Scanner scanNumber = new Scanner(System.in);    
+    numberIn = scanNumber.nextInt(); } 
+    while(validateAbuseNumber(numberIn, max) == false);
+    return numberIn;
+    }
+
+        public static boolean validateAbuseNumber(int numberIn, int max) {
+                boolean valid = false;// flag to indicate if valid character entered
+            switch (numberIn) {
+                case 1:  valid = true; break;
+                case 2:  valid = true; break;
+                case 3:  valid = true; break;    
+                case 4:  valid = true; break;
+                case 5:  valid = true; break;
+                case 6:  valid = true; break; 
+                case 7:  valid = true; break;    
+                case 8:  valid = true; break;    
+                case 9:  valid = true; break;
+                case 0:  valid = true; break;    
+           default:  System.out.println("Invalid number.");
+                    abuseNumber(max);
+                    break; }
+            if (numberIn > max){
+                valid = false;
+             System.out.println("Invalid number.");
+             abuseNumber(max);}
+            if (numberIn < 0){
+                valid = false;
+             System.out.println("Invalid number.");
+             abuseNumber(max);}      
+    return valid;
+    }
     
 }
