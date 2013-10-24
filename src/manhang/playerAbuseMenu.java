@@ -14,28 +14,29 @@ public class playerAbuseMenu {
      System.out.println("1 = Gentle encouragment.");
      System.out.println("2 = Boost confidence");
      System.out.println("3 = Self worth enhancer");
-     System.out.println("4 = Helpfull suggestion");
+     System.out.println("4 = Helpful suggestion");
      System.out.println("5 = Return to Start");
      int inputAbuse = getInput.number(5);
- switch (inputAbuse) {
-            case 1:  abuseMenuView(inputAbuse);
+ 
+             if (inputAbuse == 1) {
+            abuseMenuView(inputAbuse);
                      playerAbuseControl();
-                     break;
-            case 2:  abuseMenuView(inputAbuse);
+        } else if (inputAbuse == 2) {
+            abuseMenuView(inputAbuse);
                      playerAbuseControl();
-                     break;
-            case 3:  abuseMenuView(inputAbuse);
+        } else if (inputAbuse == 3) {
+            abuseMenuView(inputAbuse);
                      playerAbuseControl();
-                     break;
-            case 4:  abuseMenuView(inputAbuse);
+        } else if (inputAbuse == 4) {
+            abuseMenuView(inputAbuse);
                      playerAbuseControl();
-                    break;
-             case 5: start.startMenu();
-                    break;
-            default:  System.out.println("Unrecognized command, Please try again.");
+        } else if (inputAbuse == 5) {
+            start.startMenu();
+        } else {
+             System.out.println("Unrecognized command, Please try again.");
                     playerAbuseControl();
-                    break;
         }
+     
         }
     
          public static void abuseMenuView(int inputAbuse) {
