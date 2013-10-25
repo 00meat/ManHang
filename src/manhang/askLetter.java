@@ -11,18 +11,15 @@ import java.util.Scanner;
 public class askLetter {
     
 
-
 public static char guess(){
 
 Scanner scanner = new Scanner(System.in);
 String guessStr = scanner.nextLine();
 char guessChr = Character.toUpperCase(guessStr.charAt(0));
 
-
 while(validGuess(guessChr) == false){
 guessStr = scanner.nextLine();
-guessChr = Character.toUpperCase(guessStr.charAt(0));
-}
+guessChr = Character.toUpperCase(guessStr.charAt(0));}
 return guessChr;
 }
 
@@ -56,9 +53,9 @@ public static boolean validGuess(char guessChr){
                 case 'X':  valid = true; break; 
                 case 'Y':  valid = true; break;    
                 case 'Z':  valid = true; break;    
-                default: valid = false; 
-                System.out.println("Unrecognized command, Please try again.");
-                    break;
+                default:   valid = false; 
+                System.out.println("That was not a letter. Please try again, but with a letter. I promise there are no numbers or punctuation in the word.");
+                                         break;
     }
     return valid;
 }
