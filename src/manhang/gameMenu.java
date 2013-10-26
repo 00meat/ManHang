@@ -14,19 +14,22 @@ public class gameMenu {
  public static int gameMenu(int win, int loss) {
           // Start screen, select difficulty and player count.
           int winLoss = 0;
-
           int difficulty;
           int players = 1;
-          int scoreWin = 0;
-          int scoreLoose = 0;
+          int scoreWin = win;
+          int scoreLoose = loss;
+          
         System.out.println("Please select difficulty 1-3");
         difficulty = getInput.number(3);
+        
         System.out.println("Number of players? 1-4");
         players = getInput.number(4);
+        
         System.out.println("You selected " + difficulty + " difficulty with " + players + " players.");
-     
-        turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);
-        gameEndScore(winLoss, players, difficulty, win, loss);
+        
+        
+        winLoss = gameControl.game(players, difficulty, winLoss, win, loss);
+        
         return winLoss;
  }
     
@@ -37,22 +40,14 @@ public class gameMenu {
           turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);
       i++;
       }
-      gameEndScore(winLoss, players, difficulty, win, loss);
+ 
   }
   
-  public static void gameEndScore(int winLoss, int players, int difficulty, int win, int loss) {
-       
-
-          int percentage;
-          winLoss = gameControl.game(players, difficulty);
-                     if(winLoss == 1)win++;
-                     else loss++;
-    percentage = (win / (win + loss)*100);
+  public static void gameEndScore(int win, int loss) {
+          int percent;
+    percent = (win / ((win + loss)*100));
      System.out.println("You have won " + win + " times and lost " + loss + " times, your percentage is " +
-             percentage + "%");
-      
-      
-      
+             percent + "%");
   }
   
   
