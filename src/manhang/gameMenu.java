@@ -11,9 +11,10 @@ package manhang;
 public class gameMenu {
     
 
- public static void gameMenu() {
+ public static int gameMenu(int win, int loss) {
           // Start screen, select difficulty and player count.
           int winLoss = 0;
+
           int difficulty;
           int players = 1;
           int scoreWin = 0;
@@ -24,27 +25,28 @@ public class gameMenu {
         players = getInput.number(4);
         System.out.println("You selected " + difficulty + " difficulty with " + players + " players.");
      
-        turnOptionMenu.turnControl(players, difficulty);
-        gameEndScore(winLoss, players, difficulty);  
+        turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);
+        gameEndScore(winLoss, players, difficulty, win, loss);
+        return winLoss;
  }
     
  
-  public static void gameRun(int players, int difficulty) {
-       turnOptionMenu.turnControl(players, difficulty);
-
-   
+  public static void gameRun(int players, int difficulty, int winLoss, int win, int loss) {
+       int i = 1;
+      while (i < 2){
+          turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);
+      i++;
+      }
+      gameEndScore(winLoss, players, difficulty, win, loss);
   }
   
-  public static void gameEndScore(int winLoss, int players, int difficulty) {
+  public static void gameEndScore(int winLoss, int players, int difficulty, int win, int loss) {
        
-          int win = 0;
-          int loss = 0;
+
           int percentage;
           winLoss = gameControl.game(players, difficulty);
-  
-        switch (winLoss) {
-            case 0:     loss++; break;       
-            case 1:     win++; break;}
+                     if(winLoss == 1)win++;
+                     else loss++;
     percentage = (win / (win + loss)*100);
      System.out.println("You have won " + win + " times and lost " + loss + " times, your percentage is " +
              percentage + "%");

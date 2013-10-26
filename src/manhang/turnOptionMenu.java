@@ -4,12 +4,14 @@
  */
 package manhang;
 
+
+
 /**
  *
  * @author Andrew
  */
 public class turnOptionMenu {
-          public static void turnControl(int players, int difficulty) {
+          public static void turnControl(int players, int difficulty, int winLoss, int win, int loss) {
          int inputTurn = 0;
      System.out.println("Turn Options:");
      System.out.println("1 = Guess Letter.");
@@ -20,7 +22,7 @@ public class turnOptionMenu {
      inputTurn = getInput.number(5);
  switch (inputTurn) {
             case 1:  turnMenuView(inputTurn);
-                     gameMenu.gameRun(players, difficulty);
+                     gameMenu.gameEndScore(winLoss, players, difficulty, win, loss);
                      break;
             case 2:  turnMenuView(inputTurn);
                     
