@@ -23,6 +23,7 @@ public class turnOptionMenu {
 
      switch (inputTurn) {
             case 1:  turnMenuView(inputTurn);
+                     
                      break;
             case 2:  turnMenuView(inputTurn);
                      break;
@@ -38,6 +39,7 @@ public class turnOptionMenu {
                     break;
         }
      
+     
         }
     
          public static void turnMenuView(int inputTurn) {
@@ -45,8 +47,7 @@ public class turnOptionMenu {
              char guessed = 0;
              switch (inputTurn) {
              case 1:  System.out.println("Not implemented but type something anyway.");
-                        guessed = askLetter.guess();
-                        System.out.println(guessed);
+
                      break;
              case 2:  System.out.println("Not implemented.");
                      break;
@@ -58,8 +59,15 @@ public class turnOptionMenu {
         }
       
 }
+          public static void guessAndCheck() {
+ 
+             char guessed = askLetter.guess();
+            
+             
+             
+             
+        }
     
-    
-    
+     
     
 }

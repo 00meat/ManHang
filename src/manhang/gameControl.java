@@ -24,10 +24,12 @@ public class gameControl {
          gameBoard.scoreBoard(score, playerID, guessRight, guessWrong);
          System.out.println("How many wrong guesses? 1-6");
          gameBoard.hungMan(getInput.number(6));
+
          gameBoard.turnBoard(score);
          
-         if(guessWrong == 6)
-         {gameOver++;}
+         if(guessWrong >= 6)
+         {gameOver++;
+         winLoss = 0;}
          
          }
          
