@@ -60,7 +60,8 @@ public class turnOptionMenu {
       
 }
           public static void guessAndCheck() {
- 
+                String str = "someString"; 
+                char[] charArray = str.toCharArray();
              char guessed = askLetter.guess();
             
              
