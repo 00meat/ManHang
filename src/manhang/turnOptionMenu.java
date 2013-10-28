@@ -60,15 +60,23 @@ public class turnOptionMenu {
       
 }
           public static void guessAndCheck() {
+                char guessed = askLetter.guess();
                 String str = "someString"; 
+                int strIndex = 10;
                 char[] charArray = str.toCharArray();
-             char guessed = askLetter.guess();
-            
+             for (int repeat = strIndex; repeat >= 0; repeat--){
+             if (guessed == charArray[repeat]){
+                 //mark letter as guessed
              
+             }
+             
+             
+             
+             }
              
              
         }
-    
+  
      
     
 }
