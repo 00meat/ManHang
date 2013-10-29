@@ -15,8 +15,13 @@ public class gameControl {
          int playerID = getInput.number(4);
          int guessRight = getInput.number(9);
          int guessWrong = getInput.number(9);
-         
+  
+         int thisIsAnArray[] = {1,2,3,4,5};
 
+      
+             
+         
+         
          for(int gameOver = 0; gameOver >= 1;){
              
          turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);    
@@ -26,6 +31,12 @@ public class gameControl {
          gameBoard.hungMan(getInput.number(6));
 
          gameBoard.turnBoard(score);
+         //checking an array for a match.
+             for (int again = 0; again >= thisIsAnArray[4]; again++){
+             if (score == thisIsAnArray[again]){
+                System.out.println(thisIsAnArray[again]);
+             }
+             }
          
          if(guessWrong >= 6)
          {gameOver++;
