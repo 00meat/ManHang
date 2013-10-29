@@ -59,21 +59,18 @@ public class turnOptionMenu {
         }
       
 }
-          public static void guessAndCheck() {
-                char guessed = askLetter.guess();
-                String str = "someString"; 
-                int strIndex = 10;
+          public static boolean guessAndCheck(String str) {
+                char guessed = askLetter.guess(); 
                 char[] charArray = str.toCharArray();
-             for (int repeat = strIndex; repeat >= 0; repeat--){
-             if (guessed == charArray[repeat]){
+             for (int i = 0; i < str.length(); i++){
+             if (guessed == charArray[i]){
                  //mark letter as guessed
-             
+                 System.out.println("Yes that letter is correct");
+                 return true;
+             }         
              }
-             
-             
-             
-             }
-             
+             System.out.println("No that letter is not correct");
+             return false;
              
         }
   
