@@ -71,12 +71,7 @@ public class gameControl {
     return currentWinLoss;
     }
      
-     public static void alphabetize(){
-          Arrays.sort(cArr);
-         
-         
-     }
-     
+
      
      
      
