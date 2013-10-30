@@ -18,7 +18,7 @@ public class gameMenu {
           int players = 1;
           int scoreWin = win;
           int scoreLoose = loss;
-          
+          int alphabetSwitch = 0;
         System.out.println("Please select difficulty 1-3");
         difficulty = getInput.number(3);
         
@@ -28,7 +28,7 @@ public class gameMenu {
         System.out.println("You selected " + difficulty + " difficulty with " + players + " players.");
         
         
-        winLoss = gameControl.game(players, difficulty, winLoss, win, loss);
+        winLoss = gameControl.game(players, difficulty, winLoss, win, loss, alphabetSwitch);
         
         return winLoss;
  }

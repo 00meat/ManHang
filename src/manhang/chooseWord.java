@@ -28,7 +28,7 @@ public class chooseWord {
                 case 3:  chosenWord = wordListHard[rand]; break;      
            default:  System.out.println("Invalid difficulty.");
                     break; }
-        return chosenWord;
+        return chosenWord.toUpperCase();
     }
     
         public static int wordIndex(int difficulty, int rand){

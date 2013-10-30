@@ -19,6 +19,7 @@ public class turnOptionMenu {
      System.out.println("3 = Help");
      System.out.println("4 = Skip to player #'s turn.");
      System.out.println("5 = Return to Start");
+     System.out.println("6 = Alphabetize word for a bodypart back.");
      inputTurn = getInput.number(5);
 
      switch (inputTurn) {
@@ -34,6 +35,7 @@ public class turnOptionMenu {
                     break;
              case 5: start.startMenu();
                     break;
+                 
             default:  System.out.println("Unrecognized command, Please try again.");
                    
                     break;
@@ -54,6 +56,9 @@ public class turnOptionMenu {
                case 4:  System.out.println("Not implemented but select a player anyway.");
                        int PlayerNumber = getInput.number(4);
                     break;
+               case 6:  System.out.println("Alphabetizing word and giving you a point back.");
+                        
+                      break;
             default:  System.out.println("Unrecognized Command, Please reastart program");
                     break;
         }
