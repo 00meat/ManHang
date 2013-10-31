@@ -44,7 +44,6 @@ public class gameControl {
           
          //play untill loose
          for(int gameOver = 0; gameOver >= 1;){
-             
    
          turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);    
              
