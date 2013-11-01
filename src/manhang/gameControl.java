@@ -51,6 +51,25 @@ public class gameControl {
              }
              }
          //end of unused code
+             
+             
+             
+             
+             /*
+              *    SORTING
+              *       ALPHABETICALLY
+              *             STARTS
+              *                 RIGHT
+              *  ------------------HERE
+              * |
+              * |    I would have put it in another function, but that
+              * |    was like trying to pull a piston out of an engine, 
+              * |    put it in the trunk, and get it to still work right.
+              * |    This is where all the stuff it is working with is.
+              * |    This is where it is going to work with it.
+              * |___________
+              *            \/
+              */
                             switch (alphabetSwitch) {
              case 1:
                  //can't do this, replace with a for loop sorting thing
@@ -67,20 +86,19 @@ public class gameControl {
                   flag = false;
                   for ( j = 0;  j < wordCharArray.length - 1;  j++ )
                   {
-                          if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
-                          {                                             // ascending sort
+                      if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
+                                 {   // ascending sort
                                       temp = wordCharArray[ j ];
-                                     wordCharArray[ j ] = wordCharArray[ j+1];     // swapping
+                                     wordCharArray[ j ] = wordCharArray[ j+1];   
+                                     // swapping
                                       wordCharArray[ j+1] = temp; 
                                       flag = true;
                                   } 
-                          } 
-                     }  
+                             } 
+                        }  
                 }
                  //end new sort
-
-                          
-                          
+                          //turn it off
                      alphabetSwitch = 0;    
                      break;
             default: 
@@ -102,7 +120,11 @@ public class gameControl {
     return currentWinLoss;
     }
      
-
+public static char sortingChars (){
+    
+    
+    return ;
+}
      
      
      
