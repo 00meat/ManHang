@@ -106,15 +106,16 @@ public class gameControl {
 public static char smallestLetter (char wordCharArray[]){
            for ( int k = 0;  k < wordCharArray.length;  k++ ){
                  
-                 int j;
+                 
             boolean flag = true;  // will determine when the sort is finished
             char temp = 'a';
 
             while ( flag )
             {
                   flag = false;
-                  for ( j = 0;  j < wordCharArray.length - 1;  j++ )
-                  {
+                  for (char j : wordCharArray )
+                  { 
+                     
                       if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
                                  {   // ascending sort
                                   //      sortingChars (wordCharArray[ j ], wordCharArray[ j+1], temp)= temp;
