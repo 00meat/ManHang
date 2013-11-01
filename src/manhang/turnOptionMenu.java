@@ -21,7 +21,9 @@ public class turnOptionMenu {
      System.out.println("4 = Skip to player #'s turn.");
      System.out.println("5 = Return to Start");
      System.out.println("6 = Alphabetize word for a bodypart back.");
-     inputTurn = getInput.number(6);
+     System.out.println("7 = Show the lowest letter");
+     System.out.println("8 = Show the highest letter");
+     inputTurn = getInput.number(8);
 
      switch (inputTurn) {
             case 1:  turnMenuView(inputTurn);
@@ -38,7 +40,13 @@ public class turnOptionMenu {
                     break;
             case 6: turnMenuView(inputTurn);
                     alphSwitch = 1;
-                    break;    
+                    break; 
+            case 7: turnMenuView(inputTurn);
+                    alphSwitch = 2;
+                    break; 
+            case 8: turnMenuView(inputTurn);
+                    alphSwitch = 3;
+                    break; 
             default:  System.out.println("Unrecognized command, Please try again.");
                    
                     break;

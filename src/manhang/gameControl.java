@@ -75,39 +75,14 @@ public class gameControl {
                  //can't do this, replace with a for loop sorting thing
                //  Arrays.sort(wordCharArray);
                  //trying new sort
-                          for ( int k = 0;  k < wordIndex;  k++ ){
-                 
-                 int j;
-            boolean flag = true;  // will determine when the sort is finished
-            char temp = 'a';
-
-            while ( flag )
-            {
-                  flag = false;
-                  for ( j = 0;  j < wordCharArray.length - 1;  j++ )
-                  {
-                      if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
-                                 {   // ascending sort
-                                  //      sortingChars (wordCharArray[ j ], wordCharArray[ j+1], temp)= temp;
-                                     
-                                     
-                                    temp = wordCharArray[ j ];
-                                     
-                                    wordCharArray[ j ] = wordCharArray[ j+1];   
-                                     // swapping
-                                     wordCharArray[ j+1] = temp; 
-                                      flag = true;
-                                  } 
-                             } 
-                        }  
-                }
-                 //end new sort
+                 wordCharArray = alphaSorter (wordCharArray);
                           //turn it off
                      alphabetSwitch = 0;    
                      break;
-             case 2: char smallest = smallestLetter(wordCharArray[]);
+             case 2: char smallest = smallestLetter(wordCharArray);
                  break;
-             case 3: char biggest = biggestLetter(wordCharArray[]);
+                 
+             case 3: char biggest = biggestLetter(wordCharArray);
                  break;   
             default: 
                     break;
@@ -128,12 +103,34 @@ public class gameControl {
     return currentWinLoss;
     }
      
-public static char smallestLetter (char first[]){
-    
+public static char smallestLetter (char wordCharArray[]){
+           for ( int k = 0;  k < wordCharArray.length;  k++ ){
+                 
+                 int j;
+            boolean flag = true;  // will determine when the sort is finished
+            char temp = 'a';
+
+            while ( flag )
+            {
+                  flag = false;
+                  for ( j = 0;  j < wordCharArray.length - 1;  j++ )
+                  {
+                      if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
+                                 {   // ascending sort
+                                  //      sortingChars (wordCharArray[ j ], wordCharArray[ j+1], temp)= temp;
+                                    temp = wordCharArray[ j ];
+                                    wordCharArray[ j ] = wordCharArray[ j+1];   
+                                     // swapping
+                                     wordCharArray[ j+1] = temp; 
+                                      flag = true;
+                                  } 
+                             } 
+                        }  
+                }
              
     
     //not implemetned
-    return first[0];
+    return wordCharArray[0];
 }
 
 
@@ -145,6 +142,35 @@ public static char smallestLetter (char first[]){
     //not implemetned
     return first[first.length];
 }  
-     
+     public static char[] alphaSorter (char wordCharArray[]){
+             
+            for ( int k = 0;  k < wordCharArray.length;  k++ ){
+                 
+                 int j;
+            boolean flag = true;  // will determine when the sort is finished
+            char temp = 'a';
+
+            while ( flag )
+            {
+                  flag = false;
+                  for ( j = 0;  j < wordCharArray.length - 1;  j++ )
+                  {
+                      if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
+                                 {   // ascending sort
+                                  //      sortingChars (wordCharArray[ j ], wordCharArray[ j+1], temp)= temp;
+                                    temp = wordCharArray[ j ];
+                                    wordCharArray[ j ] = wordCharArray[ j+1];   
+                                     // swapping
+                                     wordCharArray[ j+1] = temp; 
+                                      flag = true;
+                                  } 
+                             } 
+                        }  
+                }
+                 //end new sort
+   
+    return wordCharArray;
+}  
+        
      
 }
