@@ -121,9 +121,9 @@ public class gameControl {
     }
      
 public static char sortingChars (){
-    
-    
-    return ;
+    char cahrs = 'a';
+    //not implemetned
+    return cahrs;
 }
      
      
