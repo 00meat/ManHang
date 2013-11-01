@@ -79,7 +79,7 @@ public class gameControl {
                  
                  int j;
             boolean flag = true;  // will determine when the sort is finished
-            char temp;
+            char temp = 'a';
 
             while ( flag )
             {
@@ -88,10 +88,14 @@ public class gameControl {
                   {
                       if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
                                  {   // ascending sort
-                                      temp = wordCharArray[ j ];
-                                     wordCharArray[ j ] = wordCharArray[ j+1];   
+                                  //      sortingChars (wordCharArray[ j ], wordCharArray[ j+1], temp)= temp;
+                                     
+                                     
+                                    temp = wordCharArray[ j ];
+                                     
+                                    wordCharArray[ j ] = wordCharArray[ j+1];   
                                      // swapping
-                                      wordCharArray[ j+1] = temp; 
+                                     wordCharArray[ j+1] = temp; 
                                       flag = true;
                                   } 
                              } 
@@ -101,6 +105,10 @@ public class gameControl {
                           //turn it off
                      alphabetSwitch = 0;    
                      break;
+             case 2: char smallest = smallestLetter(wordCharArray[]);
+                 break;
+             case 3: char biggest = biggestLetter(wordCharArray[]);
+                 break;   
             default: 
                     break;
         }
@@ -120,12 +128,23 @@ public class gameControl {
     return currentWinLoss;
     }
      
-public static char sortingChars (){
-    char cahrs = 'a';
+public static char smallestLetter (char first[]){
+    
+             
+    
     //not implemetned
-    return cahrs;
+    return first[0];
 }
-     
+
+
+
+   public static char biggestLetter (char first[]){
+    
+             
+    
+    //not implemetned
+    return first[first.length];
+}  
      
      
 }
