@@ -10,12 +10,18 @@ package manhang;
  */
 public class gameScoreBoard {
     
-    public static void wordStatus (char wLet1, char wLet2, char wLet3, char wLet4,
-            char wLet5, char wLet6, char wLet7, char wLet8, char wLet9, char wLet10, 
-            char wLet11, char wLet12, char wLet13,char wLet14,char wLet15,char wLet16){
-        
-        
+    public static void wordStatus (char wordCharArray[], boolean foundIndex[]){
+        //copy wordCharArray to make sure it isn't screwed with.
+        char workingWord[] = wordCharArray;
+        //look through working word, everywhere that foundIndex is false, make that spot in workingword a _
+       for ( int k = 0;  k < workingWord.length;  k++ ){
+               if(foundIndex[k] == false){
+               workingWord[k] = '_';
+               }
+       }
+       //make workingword into a string and output it
+        String wordOut = String.valueOf(wordCharArray);
          System.out.println("Word:");
-          System.out.println(wLet1 + " " + wLet2 + " " + wLet3 + " " + wLet4 + " " + wLet5 + " " + wLet6 + " " + wLet7 + " " + wLet8 + " " + wLet9 + " " + wLet10 + " " + wLet11 + " " + wLet12 + " " + wLet13 + " " + wLet14 + " " + wLet15 + " " + wLet16);
+          System.out.println(wordOut);
     
 }}

@@ -28,6 +28,7 @@ public class gameControl {
          int wordIndex = chooseWord.wordIndex(difficulty, rand);
          //make word into char array
          char wordCharArray[] = wordString.toCharArray();
+         boolean foundIndex[] = makefoundIndex(wordCharArray.length);
  
          //output word result, disable in finished version
          for(int i=0;i<wordCharArray.length;i++){
@@ -37,7 +38,7 @@ public class gameControl {
          //play untill loose
          for(int gameOver = 0; gameOver <= 1;){
        //tturn menu
-        int alphabetSwitch = turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);    
+        int optionSwitch = turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);    
              
          gameBoard.scoreBoard(score, playerID, guessRight, guessWrong);
          System.out.println("How many wrong guesses? 1-6");
@@ -70,27 +71,35 @@ public class gameControl {
               * |___________
               *            \/
               */
-                            switch (alphabetSwitch) {
+                            switch (optionSwitch) {
              case 1:
                  //can't do this, replace with a for loop sorting thing
                //  Arrays.sort(wordCharArray);
                  //trying new sort
                  wordCharArray = alphaSorter (wordCharArray);
                           //turn it off
-                     alphabetSwitch = 0;    
+                     optionSwitch = 0;    
                      break;
              case 2: char smallest = smallestLetter(wordCharArray);
                  break;
                  
              case 3: char biggest = biggestLetter(wordCharArray);
                  break;   
+             case 4:
+                 //get a guess, run it against the word and recrod results to foundIndex
+                 char newGuess = askLetter.guess();
+                 foundIndex = checkWord (wordCharArray, newGuess, foundIndex);
+                 
+                 break;
             default: 
                     break;
         }
+                  gameScoreBoard.wordStatus(wordCharArray, foundIndex);          
+                            
                             for(int l=0;l<wordCharArray.length;l++){
            System.out.println("Data at ["+l+"]="+wordCharArray[l]);
             }
-                            
+               gameScoreBoard.wordStatus(wordCharArray, foundIndex);             
                             
          if(guessWrong >= 6)
          {gameOver++;
@@ -169,6 +178,31 @@ public static char smallestLetter (char wordCharArray[]){
    
     return wordCharArray;
 }  
-        
      
+     //pass in the word, the guess, and found index. It will run check letter for each place in the word
+     //once it it stores weather or not the letter is a match into the found index aray.
+             public static boolean[] checkWord (char wordCharArray[], char comare, boolean foundIndex[]){
+         for ( int k = 0;  k < wordCharArray.length;  k++ ){
+               foundIndex[k] =  checkLetter(wordCharArray, comare, k); }
+        return foundIndex;
+     }
+     
+     //check letter takes the word, the guess, and the place in the array it is checking, compares it and returns
+             // weather or not it found it.
+     public static boolean checkLetter (char wordCharArray[], char comare, int k){
+        boolean foundit = false;
+        
+                 if (wordCharArray[k] == comare){
+                 foundit = true;
+                 }
+        return foundit;
+     }
+         
+     //make a bool array the length of the word, make everything in it false
+     public static boolean[] makefoundIndex (int length){
+        boolean fiBuilder[] = new boolean [length];
+                for ( int k = 0;  k < length;  k++ ){
+               fiBuilder[k] = false; }
+         return fiBuilder;
+     }
 }
