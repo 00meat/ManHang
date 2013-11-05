@@ -128,9 +128,6 @@ public static char smallestLetter (char wordCharArray[]){
                              } 
                         }  
                 }
-             
-    
-    //not implemetned
     return wordCharArray[0];
 }
 
