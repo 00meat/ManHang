@@ -167,7 +167,7 @@ public static char smallestLetter (char wordCharArray[]){
                              } 
                         }  
                 } 
-    //not implemetned
+        System.out.println(wordCharArray[wordCharArray.length]);
     return wordCharArray[wordCharArray.length];
     
 }  
