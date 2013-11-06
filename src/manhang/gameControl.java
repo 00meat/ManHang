@@ -142,12 +142,34 @@ public static char smallestLetter (char wordCharArray[]){
 
 
 
-   public static char biggestLetter (char first[]){
-    
-             
-    
+   public static char biggestLetter (char wordCharArray[]){
+        for ( int k = 0;  k < wordCharArray.length;  k++ ){
+                 
+                 
+            boolean flag = true;  // will determine when the sort is finished
+            char temp = 'a';
+
+            while ( flag )
+            {
+                  flag = false;
+                  for (char j : wordCharArray )
+                  { 
+                     
+                      if ( wordCharArray[ j ] > wordCharArray[ j+1 ] )
+                                 {   // ascending sort
+                                  //      sortingChars (wordCharArray[ j ], wordCharArray[ j+1], temp)= temp;
+                                    temp = wordCharArray[ j ];
+                                    wordCharArray[ j ] = wordCharArray[ j+1];   
+                                     // swapping
+                                     wordCharArray[ j+1] = temp; 
+                                      flag = true;
+                                  } 
+                             } 
+                        }  
+                } 
     //not implemetned
-    return first[first.length];
+    return wordCharArray[wordCharArray.length];
+    
 }  
      public static char[] alphaSorter (char wordCharArray[]){
              
