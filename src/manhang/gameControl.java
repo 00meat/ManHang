@@ -16,10 +16,13 @@ public class gameControl {
  
          
          System.out.println("TEST. please type score, playerID, guessRight and guessWrong");
+
          int score = 0;
          int guessRight = 0;
          int guessWrong = 0;
          //thisisanarray is just for an assignment, ignore it.
+
+
          int thisIsAnArray[] = {1,2,3,4,5};
          int rand = chooseWord.randNumber(1,7);
          //pick a word
