@@ -10,8 +10,7 @@ package manhang;
  */
 public class gameBoard {
     
-        public static void scoreBoard(int score, int playerID, int guessRight, int guessWrong){
-    System.out.println("Player #" + playerID);
+        public static void scoreBoard(int score, int guessRight, int guessWrong){
     System.out.println("Correct guesses:" + guessRight);
     System.out.println("Inorrect guesses:" + guessWrong);
     System.out.println("You have guessed " + (guessRight / (guessRight + guessWrong)*100) + "% correct."); 

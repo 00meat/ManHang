@@ -16,10 +16,10 @@ public class gameControl {
  
          
          System.out.println("TEST. please type score, playerID, guessRight and guessWrong");
-         int score = getInput.number(6);
-         int playerID = getInput.number(4);
-         int guessRight = getInput.number(9);
-         int guessWrong = getInput.number(9);
+         int score = 0;
+         int guessRight = 0;
+         int guessWrong = 0;
+         //thisisanarray is just for an assignment, ignore it.
          int thisIsAnArray[] = {1,2,3,4,5};
          int rand = chooseWord.randNumber(1,7);
          //pick a word
@@ -40,7 +40,7 @@ public class gameControl {
        //tturn menu
         int optionSwitch = turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);    
              
-         gameBoard.scoreBoard(score, playerID, guessRight, guessWrong);
+         gameBoard.scoreBoard(score, guessRight, guessWrong);
          System.out.println("How many wrong guesses? 1-6");
          gameBoard.hungMan(getInput.number(6));
 

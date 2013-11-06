@@ -17,11 +17,9 @@ public class chooseWord {
     public static String pickRandWord(int difficulty, int rand){
         String chosenWord = "";
         String wordListEasy[] = {"cat", "dog","rat","bird","salt","word","ball"};
-        int easyIndex[] = {3,3,3,4,4,4,4};
         String wordListMedium[] = {"catapult", "racoondog","boggart","polecat","saltwatter","wording", "baloon"};  
-        int medIndex[] = {8,9,7,7,10,7,6};
         String wordListHard[] = {"hexadecimal", "mountian","tungsten","titanium","sodium","surveillance", "bitcoin"};        
-        int hardIndex[] = {11,8,8,8,6,12,7};
+        
            switch (difficulty) {
                 case 1:  chosenWord = wordListEasy[rand]; break;
                 case 2:  chosenWord = wordListMedium[rand]; break;
