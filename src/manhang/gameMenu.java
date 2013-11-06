@@ -45,6 +45,9 @@ public class gameMenu {
   
   public static void gameEndScore(int win, int loss) {
           int percent;
+          if (win < 0 || loss < 0){
+           System.out.println("Something before gameMenu.gameEndScore screwed up and made win or loss less than 0.");
+          }
     percent = (win / ((win + loss)*100));
      System.out.println("You have won " + win + " times and lost " + loss + " times, your percentage is " +
              percent + "%");
