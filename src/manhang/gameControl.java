@@ -17,7 +17,6 @@ public class gameControl {
          
          System.out.println("TEST. please type score, playerID, guessRight and guessWrong");
          int score = getInput.number(6);
-         int playerID = getInput.number(4);
          int guessRight = getInput.number(9);
          int guessWrong = getInput.number(9);
          int thisIsAnArray[] = {1,2,3,4,5};
@@ -167,7 +166,7 @@ public static char smallestLetter (char wordCharArray[]){
                              } 
                         }  
                 } 
-    //not implemetned
+        System.out.println(wordCharArray[wordCharArray.length]);
     return wordCharArray[wordCharArray.length];
     
 }  
