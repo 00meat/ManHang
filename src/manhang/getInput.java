@@ -12,9 +12,8 @@ public class getInput {
  
     public static int number(int max) {
     int numberIn = 0;
-   
+    Scanner scanNumber = new Scanner(System.in); 
     do {
-    Scanner scanNumber = new Scanner(System.in);    
     numberIn = scanNumber.nextInt(); } 
     while(validateNumber(numberIn, max) == false);
     return numberIn;

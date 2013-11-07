@@ -30,6 +30,7 @@ public class gameControl {
          //make word into char array
          char wordCharArray[] = wordString.toCharArray();
          boolean foundIndex[] = makefoundIndex(wordCharArray.length);
+         boolean foundIndexBefore[] = makefoundIndex(wordCharArray.length);
  
          //output word result, disable in finished version
          //no more cheat mode.
@@ -91,14 +92,12 @@ public class gameControl {
                  //get a guess, run it against the word and recrod results to foundIndex
                  char newGuess = askLetter.guess();
                   //copy foundindex 
-                 boolean foundIndexBefore[] = foundIndex;
+                 foundIndexBefore = foundIndex;
                  foundIndex = checkWord (wordCharArray, newGuess, foundIndex);
                  int rightWrong = 0;
-                 for(int l=0;l<foundIndex.length;l++){
+                 for(int l=0;l < foundIndex.length;l++){
                      if (compare(foundIndex[l], foundIndexBefore[l]) == false){
-                         rightWrong++; }
-                     System.out.println(guessWrong);
-                             
+                         rightWrong++; }                             
                  }
                   if (rightWrong == 0){
                         guessWrong++; }
@@ -115,9 +114,9 @@ public class gameControl {
         }
                   gameScoreBoard.wordStatus(wordCharArray, foundIndex);          
                             
-                            for(int l=0;l<wordCharArray.length;l++){
-           System.out.println("Data at ["+l+"]="+wordCharArray[l]);
-            }
+    //                        for(int l=0;l<=wordCharArray.length;l++){
+     //      System.out.println("Data at ["+l+"]="+wordCharArray[l]);
+      //      }
                gameScoreBoard.wordStatus(wordCharArray, foundIndex);             
                             
          if(guessWrong >= 6)
