@@ -131,8 +131,8 @@ public class gameControl {
          }
          
          System.out.println("Did you win the game? 1-win 0-loose");
-     int currentWinLoss = getInput.number(900);
-    return currentWinLoss;
+     
+    return winLoss;
     }
      
 public static char smallestLetter (char wordCharArray[]){
@@ -227,7 +227,7 @@ public static char smallestLetter (char wordCharArray[]){
      //pass in the word, the guess, and found index. It will run check letter for each place in the word
      //once it it stores weather or not the letter is a match into the found index aray.
              public static boolean[] checkWord (char wordCharArray[], char comare, boolean foundIndex[]){
-         for ( int k = 0;  k < wordCharArray.length;  k++ ){
+         for ( int k = 0;  k <= wordCharArray.length;  k++ ){
                foundIndex[k] =  checkLetter(wordCharArray, comare, k); }
         return foundIndex;
      }
@@ -236,7 +236,6 @@ public static char smallestLetter (char wordCharArray[]){
              // weather or not it found it.
      public static boolean checkLetter (char wordCharArray[], char comare, int k){
         boolean foundit = false;
-        
                  if (wordCharArray[k] == comare){
                  foundit = true;
                  }

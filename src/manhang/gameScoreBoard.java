@@ -22,6 +22,6 @@ public class gameScoreBoard {
        //make workingword into a string and output it
         String wordOut = String.valueOf(wordCharArray);
          System.out.println("Word:");
-          System.out.println(wordOut);
+         System.out.println(wordOut);
     
 }}
