@@ -16,7 +16,7 @@ public class gameControl {
  
          
          System.out.println("TEST. please type score, playerID, guessRight and guessWrong");
-
+         int rightWrong;
          int score = 0;
          int guessRight = 0;
          int guessWrong = 0;
@@ -38,42 +38,21 @@ public class gameControl {
      //     System.out.println("Data at ["+i+"]="+wordCharArray[i]);
       //      }
    
-         //play untill loose
-         for(int gameOver = 0; gameOver <= 1;){
-       //tturn menu
-        int optionSwitch = turnOptionMenu.turnControl(difficulty, winLoss, win, loss);    
-             
-       //  gameBoard.scoreBoard(score, guessRight, guessWrong);
-       //  System.out.println("How many wrong guesses? 1-6");
-       
-        //this dosn't do much, turning it off.
-     //    gameBoard.turnBoard(score);
-         //checking an array for a match. unused code start
-             for (int again = 0; again >= thisIsAnArray[4]; again++){
+                for (int again = 0; again >= thisIsAnArray[4]; again++){
              if (score == thisIsAnArray[again]){
                 System.out.println(thisIsAnArray[again]);
              }
              }
-         //end of unused code
+         
+         
+         //play untill loose
+         
+         
+         for(int gameOver = 0; gameOver <= 1;){
+       //tturn menu, let player decide what they are doing with their turn
+        int optionSwitch = turnOptionMenu.turnControl(difficulty, winLoss, win, loss);    
              
-             
-             
-             
-             /*
-              *    SORTING
-              *       ALPHABETICALLY
-              *             STARTS
-              *                 RIGHT
-              *  ------------------HERE
-              * |
-              * |    I would have put it in another function, but that
-              * |    was like trying to pull a piston out of an engine, 
-              * |    put it in the trunk, and get it to still work right.
-              * |    This is where all the stuff it is working with is.
-              * |    This is where it is going to work with it.
-              * |___________
-              *            \/
-              */
+     //do what they decided, 1- alphabeize word, 2 smallest letter hint, 3biggest letter hint, 4 guess a letter
                             switch (optionSwitch) {
              case 1:
                  //can't do this, replace with a for loop sorting thing
@@ -94,7 +73,7 @@ public class gameControl {
                   //copy foundindex 
                  foundIndexBefore = foundIndex;
                  foundIndex = checkWord (wordCharArray, newGuess, foundIndex);
-                 int rightWrong = 0;
+                 rightWrong = 0;
                  for(int l=0;l < foundIndex.length;l++){
                      if (compare(foundIndex[l], foundIndexBefore[l]) == false){
                          rightWrong++; }                             
@@ -112,12 +91,12 @@ public class gameControl {
             default: 
                     break;
         }
-                  gameScoreBoard.wordStatus(wordCharArray, foundIndex);          
+                    
                             
     //                        for(int l=0;l<=wordCharArray.length;l++){
      //      System.out.println("Data at ["+l+"]="+wordCharArray[l]);
       //      }
-               gameScoreBoard.wordStatus(wordCharArray, foundIndex);             
+                        
                             
          if(guessWrong >= 6)
          {gameOver++;
@@ -226,17 +205,17 @@ public static char smallestLetter (char wordCharArray[]){
      
      //pass in the word, the guess, and found index. It will run check letter for each place in the word
      //once it it stores weather or not the letter is a match into the found index aray.
-             public static boolean[] checkWord (char wordCharArray[], char comare, boolean foundIndex[]){
-         for ( int k = 0;  k <= wordCharArray.length;  k++ ){
-               foundIndex[k] =  checkLetter(wordCharArray, comare, k); }
+             public static boolean[] checkWord (char wordCharArray[], char compChar, boolean foundIndex[]){
+         for ( int k = 0;  k < wordCharArray.length;  k++ ){
+               foundIndex[k] =  checkLetter(wordCharArray, compChar, k, foundIndex[k]); }
         return foundIndex;
      }
      
      //check letter takes the word, the guess, and the place in the array it is checking, compares it and returns
              // weather or not it found it.
-     public static boolean checkLetter (char wordCharArray[], char comare, int k){
+     public static boolean checkLetter (char wordCharArray[], char compChar, int k, boolean foundIndex){
         boolean foundit = false;
-                 if (wordCharArray[k] == comare){
+                 if (wordCharArray[k] == compChar || foundIndex == true){
                  foundit = true;
                  }
         return foundit;
