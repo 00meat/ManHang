@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @author Andrew
  */
 public class gameControl {
-     public static int game(int players, int difficulty, int winLoss, int win, int loss) {
+     public static int game(int difficulty, int winLoss, int win, int loss) {
 
  
          
@@ -21,8 +21,6 @@ public class gameControl {
          int guessRight = 0;
          int guessWrong = 0;
          //thisisanarray is just for an assignment, ignore it.
-
-
          int thisIsAnArray[] = {1,2,3,4,5};
          int rand = chooseWord.randNumber(1,7);
          //pick a word
@@ -34,20 +32,21 @@ public class gameControl {
          boolean foundIndex[] = makefoundIndex(wordCharArray.length);
  
          //output word result, disable in finished version
-         for(int i=0;i<wordCharArray.length;i++){
-           System.out.println("Data at ["+i+"]="+wordCharArray[i]);
-            }
+         //no more cheat mode.
+     //    for(int i=0;i<wordCharArray.length;i++){
+     //     System.out.println("Data at ["+i+"]="+wordCharArray[i]);
+      //      }
    
          //play untill loose
          for(int gameOver = 0; gameOver <= 1;){
        //tturn menu
-        int optionSwitch = turnOptionMenu.turnControl(players, difficulty, winLoss, win, loss);    
+        int optionSwitch = turnOptionMenu.turnControl(difficulty, winLoss, win, loss);    
              
-         gameBoard.scoreBoard(score, guessRight, guessWrong);
-         System.out.println("How many wrong guesses? 1-6");
-         gameBoard.hungMan(getInput.number(6));
-
-         gameBoard.turnBoard(score);
+       //  gameBoard.scoreBoard(score, guessRight, guessWrong);
+       //  System.out.println("How many wrong guesses? 1-6");
+       
+        //this dosn't do much, turning it off.
+     //    gameBoard.turnBoard(score);
          //checking an array for a match. unused code start
              for (int again = 0; again >= thisIsAnArray[4]; again++){
              if (score == thisIsAnArray[again]){
@@ -91,7 +90,24 @@ public class gameControl {
              case 4:
                  //get a guess, run it against the word and recrod results to foundIndex
                  char newGuess = askLetter.guess();
+                  //copy foundindex 
+                 boolean foundIndexBefore[] = foundIndex;
                  foundIndex = checkWord (wordCharArray, newGuess, foundIndex);
+                 int rightWrong = 0;
+                 for(int l=0;l<foundIndex.length;l++){
+                     if (compare(foundIndex[l], foundIndexBefore[l]) == false){
+                         rightWrong++; }
+                     System.out.println(guessWrong);
+                             
+                 }
+                  if (rightWrong == 0){
+                        guessWrong++; }
+                     else guessRight++;
+                 
+                 
+                 gameBoard.hungMan(guessWrong);
+                 gameScoreBoard.wordStatus(wordCharArray, foundIndex);
+                 
                  
                  break;
             default: 
@@ -107,6 +123,11 @@ public class gameControl {
          if(guessWrong >= 6)
          {gameOver++;
          winLoss = 0;}
+         
+         if(guessRight >= wordCharArray.length)
+         {gameOver++;
+         winLoss = 1;}
+         
          
          }
          
@@ -230,4 +251,13 @@ public static char smallestLetter (char wordCharArray[]){
                fiBuilder[k] = false; }
          return fiBuilder;
      }
+  
+     public static boolean compare(boolean a1, boolean a2) {
+            if(a1 == a2){
+                return true;}
+            else
+         return false;
+}
+     
+     
 }

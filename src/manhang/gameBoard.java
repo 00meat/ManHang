@@ -70,7 +70,7 @@ public class gameBoard {
                         System.out.println("|___________ "); 
                      break;
              default:  System.out.println("Unrecognized command, Please try again.");
-                    start.startMenu();
+                   
                     break;
         }
     }

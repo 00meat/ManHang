@@ -11,7 +11,7 @@ package manhang;
  * @author Andrew
  */
 public class turnOptionMenu {
-          public static int turnControl(int players, int difficulty, int winLoss, int win, int loss) {
+          public static int turnControl(int difficulty, int winLoss, int win, int loss) {
          int inputTurn = 0;
          int alphSwitch = 0;
      System.out.println("Turn Options:");
