@@ -9,6 +9,8 @@ package manhang;
  * @author Andrew
  */
 public class gameScoreBoard {
+ 
+    
     
     public static void wordStatus (char wordCharArray[], boolean foundIndex[]){
         //copy wordCharArray to make sure it isn't screwed with.

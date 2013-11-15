@@ -9,15 +9,19 @@ package manhang;
  * @author Andrew
  */
 public class gameMenu {
-    
 
+         static private int winLoss = 0;
+         static private int difficulty;
+         static private int scoreWin;
+         static private int scoreLoose;
+         static private int alphabetSwitch = 0;
+         static private int percent;
+    
+    
  public static int gameMenu(int win, int loss) {
           // Start screen, select difficulty and player count.
-          int winLoss = 0;
-          int difficulty;
-          int scoreWin = win;
-          int scoreLoose = loss;
-          int alphabetSwitch = 0;
+        scoreWin = win;
+        scoreLoose = loss;
         System.out.println("Please select difficulty 1-3");
         difficulty = getInput.number(3);
         
@@ -40,7 +44,7 @@ public class gameMenu {
   }
   
   public static void gameEndScore(int win, int loss) {
-          int percent;
+          
           if (win < 0 || loss < 0){
            System.out.println("Something before gameMenu.gameEndScore screwed up and made win or loss less than 0.");
           }

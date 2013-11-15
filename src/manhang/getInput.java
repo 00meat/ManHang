@@ -9,18 +9,21 @@ import java.util.Scanner;
  * @author Andrew
  */
 public class getInput {
- 
+    public static boolean valid = false;// flag to indicate if valid character entered
+    public static int numberIn = 0;
+    public static char[] guess;
+    
     public static int number(int max) {
-    int numberIn = 0;
+     
     Scanner scanNumber = new Scanner(System.in); 
     do {
     numberIn = scanNumber.nextInt(); } 
     while(validateNumber(numberIn, max) == false);
     return numberIn;
     }
-
+          
         private static boolean validateNumber(int numberIn, int max) {
-                boolean valid = false;// flag to indicate if valid character entered
+               
             switch (numberIn) {
                 case 1:  valid = true; break;
                 case 2:  valid = true; break;
@@ -50,7 +53,7 @@ public class getInput {
     public static char letter() {
         Scanner scanLetter = new Scanner(System.in);
         String letter = scanLetter.next();
-        char[] guess;
+        
         guess = letter.toCharArray();
         return guess[0];
         }

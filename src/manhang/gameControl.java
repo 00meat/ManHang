@@ -12,34 +12,33 @@ import java.util.Arrays;
  */
 public class gameControl {
     
-        private int rightWrong;
-        private int score = 0;
-        private int guessRight = 0;
-        private int guessWrong = 0;
-    
-    
-    
+        static private int rightWrong;
+        static private int score = 0;
+        static private int guessRight = 0;
+        static private int guessWrong = 0;
+        static private int thisIsAnArray[] = {1,2,3,4,5};
+        static private int rand = chooseWord.randNumber(1,7);
+        static private int wordIndex;
+         //make word into char array
+        static private String wordString;
+        static private char wordCharArray[] = wordString.toCharArray();
+        static private boolean foundIndex[] = makefoundIndex(wordCharArray.length);
+        static private boolean foundIndexBefore[] = makefoundIndex(wordCharArray.length);
+        
     
      public static int game(int difficulty, int winLoss, int win, int loss) {
 
  
          
          System.out.println("TEST. please type score, playerID, guessRight and guessWrong");
-         int rightWrong;
-         int score = 0;
-         int guessRight = 0;
-         int guessWrong = 0;
          //thisisanarray is just for an assignment, ignore it.
-         int thisIsAnArray[] = {1,2,3,4,5};
-         int rand = chooseWord.randNumber(1,7);
+   
          //pick a word
-         String wordString = chooseWord.pickRandWord(difficulty, rand);
+        
          //get it's index
-         int wordIndex = chooseWord.wordIndex(difficulty, rand);
-         //make word into char array
-         char wordCharArray[] = wordString.toCharArray();
-         boolean foundIndex[] = makefoundIndex(wordCharArray.length);
-         boolean foundIndexBefore[] = makefoundIndex(wordCharArray.length);
+         wordIndex = chooseWord.wordIndex(difficulty, rand);
+         wordString = chooseWord.pickRandWord(difficulty, rand);
+         
  
          //output word result, disable in finished version
          //no more cheat mode.

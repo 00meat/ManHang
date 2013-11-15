@@ -9,6 +9,10 @@ import java.util.Scanner;
  * @author Andrew
  */
 public class playerAbuseMenu {
+     private static boolean valid = false;// flag to indicate if valid character entered
+     private static int inputAbuse;
+     private static int numberIn = 0;
+    
         public static void playerAbuseControl() {
      System.out.println("Encouragment Menu:");
      System.out.println("1 = Gentle encouragment.");
@@ -16,7 +20,7 @@ public class playerAbuseMenu {
      System.out.println("3 = Self worth enhancer");
      System.out.println("4 = Helpful suggestion");
      System.out.println("5 = Return to Start");
-     int inputAbuse = abuseNumber(5);
+     inputAbuse = abuseNumber(5);
  
              if (inputAbuse == 1) {
             abuseMenuView(inputAbuse);
@@ -55,7 +59,7 @@ public class playerAbuseMenu {
         }
     
      private static int abuseNumber(int max) {
-    int numberIn = 0;
+
    
     do {
     Scanner scanNumber = new Scanner(System.in);    
@@ -65,7 +69,7 @@ public class playerAbuseMenu {
     }
 
         private static boolean validateAbuseNumber(int numberIn, int max) {
-                boolean valid = false;// flag to indicate if valid character entered
+              
             switch (numberIn) {
                 case 1:  valid = true; break;
                 case 2:  valid = true; break;

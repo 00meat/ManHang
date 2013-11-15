@@ -72,12 +72,15 @@ public class gameBoard {
              default:  System.out.println("Unrecognized command, Please try again.");
                    
                     break;
+                 
         }
+        turnBoard(score);
+        
     }
     
 
   
-        public static void turnBoard(int score){
+        private static void turnBoard(int score){
     gameScoreControl.scoreBoard();
     System.out.println("Avalable:");
     System.out.println("A B C D E F G H I"); 

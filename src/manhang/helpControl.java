@@ -9,8 +9,12 @@ import java.util.Scanner;
  * @author Andrew
  */
 public class helpControl {
+    private static int inputHelp = 0;
+    private static int numberIn = 0;
+    private static boolean valid = false;// flag to indicate if valid character entered
+    
     public static void helpMenuControl() {
-     int inputHelp = 0;
+
      System.out.println("Help Menu:");
      System.out.println("1 = Rules");
      System.out.println("2 = How to Play");
@@ -68,7 +72,7 @@ public class helpControl {
          
          
           private static int askNumber(int max) {
-    int numberIn = 0;
+   
    
     do {
         Scanner scanNumber = new Scanner(System.in);    
@@ -78,7 +82,7 @@ public class helpControl {
   }
 
         private static boolean validateAskNumber(int numberIn, int max) {
-                boolean valid = false;// flag to indicate if valid character entered
+               
             switch (numberIn) {
                 case 1:  valid = true; break;
                 case 2:  valid = true; break;

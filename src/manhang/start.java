@@ -8,10 +8,17 @@ import java.util.Scanner;
  *
  * @author Andrew
  */
+
+
 public class start {
+    
+         private static int win = 0;
+         private static int loss = 0; 
+         private static int input;
+    
+    
         public static void startMenu() {
-          int win = 0;
-          int loss = 0; 
+    
           
      
      System.out.println("New Game = 1");
@@ -39,7 +46,7 @@ public class start {
      System.out.println("Next Game = 1");
      System.out.println("Help Menu = 2");
      System.out.println("Encouragment Menu = 3");
-     int input = getInput.number(3);
+     input = getInput.number(3);
       
     switch (input) {
             case 1:  int winLoss = gameMenu.gameMenu(win, loss);
