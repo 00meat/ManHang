@@ -9,6 +9,11 @@ package manhang;
  * @author Andrew
  */
 public class chooseWord {
+  
+    
+    
+    
+    
     public static int randNumber(int min, int max){
             int randomNum = min + (int)(Math.random()*max);
             return randomNum;

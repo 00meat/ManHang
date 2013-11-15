@@ -39,7 +39,7 @@ public class getInput {
                 valid = false;
              System.out.println("Invalid number.");
              number(max);}
-            if (numberIn < 0){
+            else if (numberIn < 0){
                 valid = false;
              System.out.println("Invalid number.");
              number(max);}      
