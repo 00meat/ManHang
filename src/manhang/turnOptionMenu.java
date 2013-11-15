@@ -55,7 +55,7 @@ public class turnOptionMenu {
      return alphSwitch;
         }
     
-         public static void turnMenuView(int inputTurn) {
+         private static void turnMenuView(int inputTurn) {
  
              char guessed = 0;
              switch (inputTurn) {
@@ -75,7 +75,7 @@ public class turnOptionMenu {
         }
       
 }
-          public static boolean guessAndCheck(String str) {
+          private static boolean guessAndCheck(String str) {
                 char guessed = askLetter.guess(); 
                 char[] charArray = str.toCharArray();
              for (int i = 0; i < str.length(); i++){
