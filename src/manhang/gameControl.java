@@ -88,7 +88,7 @@ public class gameControl {
                  
                  
                  break;
-            default: 
+            default: System.out.println("How did you even get this error? gamecontrol.game default case.");
                     break;
         }
                     

@@ -19,7 +19,8 @@ char guessChr = Character.toUpperCase(guessStr.charAt(0));
 
 while(validGuess(guessChr) == false){
 guessStr = scanner.nextLine();
-guessChr = Character.toUpperCase(guessStr.charAt(0));}
+guessChr = Character.toUpperCase(guessStr.charAt(0));
+}
 return guessChr;
 }
 
