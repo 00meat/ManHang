@@ -19,7 +19,7 @@ public class getInput {
     return numberIn;
     }
 
-        public static boolean validateNumber(int numberIn, int max) {
+        private static boolean validateNumber(int numberIn, int max) {
                 boolean valid = false;// flag to indicate if valid character entered
             switch (numberIn) {
                 case 1:  valid = true; break;

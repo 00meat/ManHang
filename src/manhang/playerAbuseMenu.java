@@ -39,7 +39,7 @@ public class playerAbuseMenu {
      
         }
     
-         public static void abuseMenuView(int inputAbuse) {
+         private static void abuseMenuView(int inputAbuse) {
  switch (inputAbuse) {
             case 1:  System.out.println("Keep trying. It's not life or death... for you.");
                      break;
@@ -54,7 +54,7 @@ public class playerAbuseMenu {
         }
         }
     
-     public static int abuseNumber(int max) {
+     private static int abuseNumber(int max) {
     int numberIn = 0;
    
     do {
@@ -64,7 +64,7 @@ public class playerAbuseMenu {
     return numberIn;
     }
 
-        public static boolean validateAbuseNumber(int numberIn, int max) {
+        private static boolean validateAbuseNumber(int numberIn, int max) {
                 boolean valid = false;// flag to indicate if valid character entered
             switch (numberIn) {
                 case 1:  valid = true; break;

@@ -35,7 +35,7 @@ public class start {
                     break;
         }
  }
-             public static void continueMenu(int win, int loss) {
+             private static void continueMenu(int win, int loss) {
      System.out.println("Next Game = 1");
      System.out.println("Help Menu = 2");
      System.out.println("Encouragment Menu = 3");
