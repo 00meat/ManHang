@@ -11,6 +11,15 @@ import java.util.Arrays;
  * @author Andrew
  */
 public class gameControl {
+    
+        private int rightWrong;
+        private int score = 0;
+        private int guessRight = 0;
+        private int guessWrong = 0;
+    
+    
+    
+    
      public static int game(int difficulty, int winLoss, int win, int loss) {
 
  
@@ -144,7 +153,7 @@ public static char smallestLetter (char wordCharArray[]){
 
 
 
-   public static char biggestLetter (char wordCharArray[]){
+   private static char biggestLetter (char wordCharArray[]){
         for ( int k = 0;  k < wordCharArray.length;  k++ ){
                  
                  
@@ -173,7 +182,7 @@ public static char smallestLetter (char wordCharArray[]){
     return wordCharArray[wordCharArray.length];
     
 }  
-     public static char[] alphaSorter (char wordCharArray[]){
+     private static char[] alphaSorter (char wordCharArray[]){
              
             for ( int k = 0;  k < wordCharArray.length;  k++ ){
                  
@@ -213,7 +222,7 @@ public static char smallestLetter (char wordCharArray[]){
      
      //check letter takes the word, the guess, and the place in the array it is checking, compares it and returns
              // weather or not it found it.
-     public static boolean checkLetter (char wordCharArray[], char compChar, int k, boolean foundIndex){
+     private static boolean checkLetter (char wordCharArray[], char compChar, int k, boolean foundIndex){
         boolean foundit = false;
                  if (wordCharArray[k] == compChar || foundIndex == true){
                  foundit = true;
@@ -222,14 +231,14 @@ public static char smallestLetter (char wordCharArray[]){
      }
          
      //make a bool array the length of the word, make everything in it false
-     public static boolean[] makefoundIndex (int length){
+     private static boolean[] makefoundIndex (int length){
         boolean fiBuilder[] = new boolean [length];
                 for ( int k = 0;  k < length;  k++ ){
                fiBuilder[k] = false; }
          return fiBuilder;
      }
   
-     public static boolean compare(boolean a1, boolean a2) {
+     private static boolean compare(boolean a1, boolean a2) {
             if(a1 == a2){
                 return true;}
             else

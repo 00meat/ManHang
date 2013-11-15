@@ -39,7 +39,7 @@ public class helpControl {
         }
         }
     
-         public static void helpMenuView(int inputHelp) {
+         private static void helpMenuView(int inputHelp) {
  switch (inputHelp) {
             case 1:  System.out.println("RULES:");
                      System.out.println("1- The Player has to guess a word one letter at a time.");
@@ -67,7 +67,7 @@ public class helpControl {
         }
          
          
-          public static int askNumber(int max) {
+          private static int askNumber(int max) {
     int numberIn = 0;
    
     do {
@@ -77,7 +77,7 @@ public class helpControl {
          return numberIn;
   }
 
-        public static boolean validateAskNumber(int numberIn, int max) {
+        private static boolean validateAskNumber(int numberIn, int max) {
                 boolean valid = false;// flag to indicate if valid character entered
             switch (numberIn) {
                 case 1:  valid = true; break;
