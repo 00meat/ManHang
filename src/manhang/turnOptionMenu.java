@@ -11,9 +11,14 @@ package manhang;
  * @author Andrew
  */
 public class turnOptionMenu {
+    
+         private static int inputTurn = 0;
+         private static int alphSwitch = 0;
+         private static char guessed = 0;
+         private static char[] charArray;
+     
+    
           public static int turnControl(int difficulty, int winLoss, int win, int loss) {
-         int inputTurn = 0;
-         int alphSwitch = 0;
      System.out.println("Turn Options:");
      System.out.println("1 = Take turn");
      System.out.println("2 = Give hint: one point penalty: one random letter");
@@ -57,7 +62,7 @@ public class turnOptionMenu {
     
          private static void turnMenuView(int inputTurn) {
  
-             char guessed = 0;
+            
              switch (inputTurn) {
              case 1:  System.out.println("Please guess a letter.");
 
@@ -76,8 +81,8 @@ public class turnOptionMenu {
       
 }
           private static boolean guessAndCheck(String str) {
-                char guessed = askLetter.guess(); 
-                char[] charArray = str.toCharArray();
+                guessed = askLetter.guess(); 
+                charArray = str.toCharArray();
              for (int i = 0; i < str.length(); i++){
              if (guessed == charArray[i]){
                  //mark letter as guessed
