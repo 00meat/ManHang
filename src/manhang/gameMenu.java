@@ -10,8 +10,8 @@ package manhang;
  */
 public class gameMenu {
 
-         static private int winLoss = 0;
-         static private int difficulty;
+         static public int winLoss = 0;
+         static public int difficulty;
          static private int scoreWin;
          static private int scoreLoose;
          static private int alphabetSwitch = 0;

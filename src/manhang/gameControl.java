@@ -17,18 +17,17 @@ public class gameControl {
         static private int guessRight = 0;
         static private int guessWrong = 0;
         static private int thisIsAnArray[] = {1,2,3,4,5};
-        static private int rand = chooseWord.randNumber(1,7);
         static private int wordIndex;
          //make word into char array
         static private String wordString;
-        static private char wordCharArray[] = wordString.toCharArray();
-        static private boolean foundIndex[] = makefoundIndex(wordCharArray.length);
-        static private boolean foundIndexBefore[] = makefoundIndex(wordCharArray.length);
+        static public char wordCharArray[];
+        static public boolean foundIndex[];
+        static public boolean foundIndexBefore[];
         
     
      public static int game(int difficulty, int winLoss, int win, int loss) {
 
- 
+         
          
          System.out.println("TEST. please type score, playerID, guessRight and guessWrong");
          //thisisanarray is just for an assignment, ignore it.
@@ -36,10 +35,15 @@ public class gameControl {
          //pick a word
         
          //get it's index
-         wordIndex = chooseWord.wordIndex(difficulty, rand);
-         wordString = chooseWord.pickRandWord(difficulty, rand);
          
+            
+     //    wordIndex = chooseWord.wordIndex(difficulty, rand);
+         wordString = chooseWord.pickRandWord(difficulty);
+         wordCharArray = wordString.toCharArray();  
+         foundIndex = makefoundIndex(wordCharArray.length);
+         foundIndexBefore = makefoundIndex(wordCharArray.length);
  
+         
          //output word result, disable in finished version
          //no more cheat mode.
      //    for(int i=0;i<wordCharArray.length;i++){

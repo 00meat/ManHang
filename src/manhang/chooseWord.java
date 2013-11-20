@@ -19,16 +19,16 @@ public class chooseWord {
             return randomNum;
     }
         
-    public static String pickRandWord(int difficulty, int rand){
+    public static String pickRandWord(int difficulty){
         String chosenWord = "";
         String wordListEasy[] = {"cat", "dog","rat","bird","salt","word","ball"};
         String wordListMedium[] = {"catapult", "racoondog","boggart","polecat","saltwatter","wording", "baloon"};  
         String wordListHard[] = {"hexadecimal", "mountian","tungsten","titanium","sodium","surveillance", "bitcoin"};        
         
            switch (difficulty) {
-                case 1:  chosenWord = wordListEasy[rand]; break;
-                case 2:  chosenWord = wordListMedium[rand]; break;
-                case 3:  chosenWord = wordListHard[rand]; break;      
+                case 1:  chosenWord = wordListEasy[chooseWord.randNumber(1,7)]; break;
+                case 2:  chosenWord = wordListMedium[chooseWord.randNumber(1,7)]; break;
+                case 3:  chosenWord = wordListHard[chooseWord.randNumber(1,7)]; break;      
            default:  System.out.println("Invalid difficulty.");
                     break; }
         return chosenWord.toUpperCase();
