@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class playerAbuseMenu {
      private static boolean valid = false;// flag to indicate if valid character entered
-     private static int inputAbuse;
+     private static int input;
      private static int numberIn = 0;
     
         public static void playerAbuseControl() {
@@ -20,21 +20,21 @@ public class playerAbuseMenu {
      System.out.println("3 = Self worth enhancer");
      System.out.println("4 = Helpful suggestion");
      System.out.println("5 = Return to Start");
-     inputAbuse = abuseNumber(5);
+     input = abuseNumber(5);
  
-             if (inputAbuse == 1) {
-            abuseMenuView(inputAbuse);
+             if (input == 1) {
+            abuseMenuView(input);
                      playerAbuseControl();
-        } else if (inputAbuse == 2) {
-            abuseMenuView(inputAbuse);
+        } else if (input == 2) {
+            abuseMenuView(input);
                      playerAbuseControl();
-        } else if (inputAbuse == 3) {
-            abuseMenuView(inputAbuse);
+        } else if (input == 3) {
+            abuseMenuView(input);
                      playerAbuseControl();
-        } else if (inputAbuse == 4) {
-            abuseMenuView(inputAbuse);
+        } else if (input == 4) {
+            abuseMenuView(input);
                      playerAbuseControl();
-        } else if (inputAbuse == 5) {
+        } else if (input == 5) {
             start.startMenu();
         } else {
              System.out.println("Unrecognized command, Please try again.");
@@ -43,8 +43,8 @@ public class playerAbuseMenu {
      
         }
     
-         private static void abuseMenuView(int inputAbuse) {
- switch (inputAbuse) {
+         private static void abuseMenuView(int input) {
+ switch (input) {
             case 1:  System.out.println("Keep trying. It's not life or death... for you.");
                      break;
             case 2:  System.out.println("You shouldn't be able to get many more wrong. Guess another leter.");

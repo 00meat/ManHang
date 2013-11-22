@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Andrew
  */
 public class helpControl {
-    private static int inputHelp = 0;
+    private static int input = 0;
     private static int numberIn = 0;
     private static boolean valid = false;// flag to indicate if valid character entered
     
@@ -21,18 +21,18 @@ public class helpControl {
      System.out.println("3 = Player Select");
      System.out.println("4 = Difficulty Select");
      System.out.println("5 = Return to Start");
-     inputHelp = askNumber(5);
- switch (inputHelp) {
-            case 1:  helpMenuView(inputHelp);
+     input = askNumber(5);
+ switch (input) {
+            case 1:  helpMenuView(input);
                      helpMenuControl();
                      break;
-            case 2:  helpMenuView(inputHelp);
+            case 2:  helpMenuView(input);
                      helpMenuControl();
                      break;
-            case 3:  helpMenuView(inputHelp);
+            case 3:  helpMenuView(input);
                      helpMenuControl();
                      break;
-            case 4:  helpMenuView(inputHelp);
+            case 4:  helpMenuView(input);
                      helpMenuControl();
                     break;
              case 5: start.startMenu();
