@@ -9,13 +9,14 @@ import java.util.Scanner;
  * @author Andrew
  */
 
+  
 
-public class start {
+public class Menu {
     
          private static int win = 0;
          private static int loss = 0; 
-         private static int input;
-    
+         public static int input;
+  
     
         public static void startMenu() {
     
@@ -24,7 +25,7 @@ public class start {
      System.out.println("New Game = 1");
      System.out.println("Help Menu = 2");
      System.out.println("Encouragment Menu = 3");
-     int input = getInput.number(3);
+     input = getInput.number(3);
       
      
     switch (input) {

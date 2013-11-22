@@ -28,7 +28,7 @@ public class ManHang {
  
  public static void main(String[] args) {
      splash.splashScrene();
-     start.startMenu();
+     Menu.startMenu();
      
     }
 }

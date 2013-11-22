@@ -8,12 +8,12 @@ import java.util.Scanner;
  *
  * @author Andrew
  */
-public class helpControl {
-    private static int input = 0;
+public class helpControl extends Menu{
+
     private static int numberIn = 0;
     private static boolean valid = false;// flag to indicate if valid character entered
     
-    public static void helpMenuControl() {
+    @Override public static void helpMenuControl() {
 
      System.out.println("Help Menu:");
      System.out.println("1 = Rules");
@@ -35,7 +35,7 @@ public class helpControl {
             case 4:  helpMenuView(input);
                      helpMenuControl();
                     break;
-             case 5: start.startMenu();
+             case 5: Menu.startMenu();
                     break;
             default:  System.out.println("Unrecognized command, Please try again.");
                     helpMenuControl();
@@ -43,7 +43,7 @@ public class helpControl {
         }
         }
     
-         private static void helpMenuView(int input) {
+        @Override private static void helpMenuView(int input) {
  switch (input) {
             case 1:  System.out.println("RULES:");
                      System.out.println("1- The Player has to guess a word one letter at a time.");
@@ -71,7 +71,7 @@ public class helpControl {
         }
          
          
-          private static int askNumber(int max) {
+       @Override   private static int askNumber(int max) {
    
    
     do {

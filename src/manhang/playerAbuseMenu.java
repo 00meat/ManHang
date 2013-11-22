@@ -8,12 +8,12 @@ import java.util.Scanner;
  *
  * @author Andrew
  */
-public class playerAbuseMenu {
+
+public class playerAbuseMenu extends Menu {
      private static boolean valid = false;// flag to indicate if valid character entered
-     private static int input;
      private static int numberIn = 0;
     
-        public static void playerAbuseControl() {
+      @Override  public static void playerAbuseControl() {
      System.out.println("Encouragment Menu:");
      System.out.println("1 = Gentle encouragment.");
      System.out.println("2 = Boost confidence");
@@ -35,7 +35,7 @@ public class playerAbuseMenu {
             abuseMenuView(input);
                      playerAbuseControl();
         } else if (input == 5) {
-            start.startMenu();
+            Menu.startMenu();
         } else {
              System.out.println("Unrecognized command, Please try again.");
                     playerAbuseControl();
@@ -43,7 +43,7 @@ public class playerAbuseMenu {
      
         }
     
-         private static void abuseMenuView(int input) {
+        @Override private static void abuseMenuView(int input) {
  switch (input) {
             case 1:  System.out.println("Keep trying. It's not life or death... for you.");
                      break;

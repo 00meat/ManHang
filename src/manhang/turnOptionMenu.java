@@ -41,7 +41,7 @@ public class turnOptionMenu {
             case 4:  turnMenuView(inputTurn);
                    
                     break;
-            case 5: start.startMenu();
+            case 5: Menu.startMenu();
                     break;
             case 6: turnMenuView(inputTurn);
                     alphSwitch = 1;
