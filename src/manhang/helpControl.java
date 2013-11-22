@@ -43,8 +43,8 @@ public class helpControl {
         }
         }
     
-         private static void helpMenuView(int inputHelp) {
- switch (inputHelp) {
+         private static void helpMenuView(int input) {
+ switch (input) {
             case 1:  System.out.println("RULES:");
                      System.out.println("1- The Player has to guess a word one letter at a time.");
                      System.out.println("2- Players may buess up to 6 letters wrong before they all loose.");
