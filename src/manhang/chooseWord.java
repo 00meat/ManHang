@@ -11,13 +11,9 @@ package manhang;
 public class chooseWord {
   
     
+    private final static int randomNumber = 1 + (int)(Math.random()*7);
     
     
-    
-    public static int randNumber(int min, int max){
-            int randomNum = min + (int)(Math.random()*max);
-            return randomNum;
-    }
         
     public static String pickRandWord(int difficulty){
         String chosenWord = "";
@@ -26,9 +22,9 @@ public class chooseWord {
         String wordListHard[] = {"hexadecimal", "mountian","tungsten","titanium","sodium","surveillance", "bitcoin"};        
         
            switch (difficulty) {
-                case 1:  chosenWord = wordListEasy[chooseWord.randNumber(1,7)]; break;
-                case 2:  chosenWord = wordListMedium[chooseWord.randNumber(1,7)]; break;
-                case 3:  chosenWord = wordListHard[chooseWord.randNumber(1,7)]; break;      
+                case 1:  chosenWord = wordListEasy[randomNumber]; break;
+                case 2:  chosenWord = wordListMedium[randomNumber]; break;
+                case 3:  chosenWord = wordListHard[randomNumber]; break;      
            default:  System.out.println("Invalid difficulty.");
                     break; }
         return chosenWord.toUpperCase();

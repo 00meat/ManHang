@@ -13,7 +13,7 @@ public class helpControl extends Menu{
     private static int numberIn = 0;
     private static boolean valid = false;// flag to indicate if valid character entered
     
-    @Override public static void helpMenuControl() {
+     public static void helpMenuControl() {
 
      System.out.println("Help Menu:");
      System.out.println("1 = Rules");
@@ -43,7 +43,7 @@ public class helpControl extends Menu{
         }
         }
     
-        @Override private static void helpMenuView(int input) {
+         private static void helpMenuView(int input) {
  switch (input) {
             case 1:  System.out.println("RULES:");
                      System.out.println("1- The Player has to guess a word one letter at a time.");
@@ -71,7 +71,7 @@ public class helpControl extends Menu{
         }
          
          
-       @Override   private static int askNumber(int max) {
+          private static int askNumber(int max) {
    
    
     do {

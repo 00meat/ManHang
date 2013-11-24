@@ -8,7 +8,7 @@ package manhang;
  *
  * @author Andrew
  */
-public class gameMenu {
+public class gameMenu extends Menu {
 
          static public int winLoss = 0;
          static public int difficulty;
@@ -18,7 +18,7 @@ public class gameMenu {
          static private int percent;
     
     
- public static int gameMenu(int win, int loss) {
+ public static int gameMenu () {
           // Start screen, select difficulty and player count.
         scoreWin = win;
         scoreLoose = loss;
@@ -28,13 +28,13 @@ public class gameMenu {
         System.out.println("You selected " + difficulty + " difficulty.");
         
         
-        winLoss = gameControl.game(difficulty, winLoss, win, loss);
+        winLoss = gameControl.game(difficulty, winLoss);
         
         return winLoss;
  }
     
  
-  public static void gameRun(int players, int difficulty, int winLoss, int win, int loss) {
+  public static void gameRun(int players, int difficulty, int winLoss) {
        int i = 1;
       while (i < 2){
           turnOptionMenu.turnControl(difficulty, winLoss, win, loss);
@@ -43,7 +43,7 @@ public class gameMenu {
  
   }
   
-  public static void gameEndScore(int win, int loss) {
+  public static void gameEndScore() {
           
           if (win < 0 || loss < 0){
            System.out.println("Something before gameMenu.gameEndScore screwed up and made win or loss less than 0.");

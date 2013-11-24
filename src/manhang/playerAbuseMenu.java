@@ -13,7 +13,7 @@ public class playerAbuseMenu extends Menu {
      private static boolean valid = false;// flag to indicate if valid character entered
      private static int numberIn = 0;
     
-      @Override  public static void playerAbuseControl() {
+        public static void playerAbuseControl() {
      System.out.println("Encouragment Menu:");
      System.out.println("1 = Gentle encouragment.");
      System.out.println("2 = Boost confidence");
@@ -43,7 +43,7 @@ public class playerAbuseMenu extends Menu {
      
         }
     
-        @Override private static void abuseMenuView(int input) {
+         private static void abuseMenuView(int input) {
  switch (input) {
             case 1:  System.out.println("Keep trying. It's not life or death... for you.");
                      break;

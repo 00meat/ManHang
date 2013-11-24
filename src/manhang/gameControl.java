@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * @author Andrew
  */
-public class gameControl {
+public class gameControl extends gameMenu {
     
         static private int rightWrong;
         static private int score = 0;
@@ -25,7 +25,7 @@ public class gameControl {
         static public boolean foundIndexBefore[];
         
     
-     public static int game(int difficulty, int winLoss, int win, int loss) {
+     public static int game(int difficulty, int winLoss) {
 
          
          
