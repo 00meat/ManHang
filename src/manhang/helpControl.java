@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author Andrew
  */
-public class helpControl extends Menu{
+public abstract class helpControl extends Menu{
 
     private static int numberIn = 0;
     private static boolean valid = false;// flag to indicate if valid character entered

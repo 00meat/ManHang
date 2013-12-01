@@ -8,7 +8,7 @@ package manhang;
  *
  * @author Andrew
  */
-public class gameMenu extends Menu {
+public abstract class gameMenu extends Menu {
 
          static public int winLoss = 0;
          static public int difficulty;

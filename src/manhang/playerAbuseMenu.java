@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Andrew
  */
 
-public class playerAbuseMenu extends Menu {
+public abstract class playerAbuseMenu extends Menu {
      private static boolean valid = false;// flag to indicate if valid character entered
      private static int numberIn = 0;
     

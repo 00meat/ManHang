@@ -10,5 +10,6 @@ package manhang;
  * @author Andrew
  */
 public interface EnterInfo {
+    public String wordGet();
     
 }

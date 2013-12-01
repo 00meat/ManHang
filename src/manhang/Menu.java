@@ -11,7 +11,7 @@ import java.util.Scanner;
 
   
 
-public class Menu {
+public abstract class Menu implements DisplayInfo, EnterInfo  {
     
          public static int win = 0;
          public static int loss = 0; 

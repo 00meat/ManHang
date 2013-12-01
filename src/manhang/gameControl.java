@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * @author Andrew
  */
-public class gameControl extends gameMenu {
+public abstract class gameControl extends gameMenu {
     
         static private int rightWrong;
         static private int score = 0;

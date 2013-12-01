@@ -10,7 +10,7 @@ package manhang;
  */
 public interface DisplayInfo {
     
-    implements gameboard.scoreboard(score, guessRight, guessWrong);
+    public String wordStorage();
     
     
 }
