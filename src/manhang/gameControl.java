@@ -122,9 +122,13 @@ public abstract class gameControl extends gameMenu {
          }
          
          System.out.println("Did you win the game? 1-win 0-loose");
-     
+    
+         
+         
     return winLoss;
     }
+
+     
      
 public static char smallestLetter (char wordCharArray[]){
            for ( int k = 0;  k < wordCharArray.length;  k++ ){

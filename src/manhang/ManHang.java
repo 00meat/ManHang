@@ -27,8 +27,15 @@ public class ManHang {
      */
  
  public static void main(String[] args) {
-     splash.splashScrene();
+     
+     try{
+ splash.splashScrene();
      Menu.startMenu();
+}
+catch(Exception e){
+System.out.println("it broke");
+}
+     
      
     }
 }
