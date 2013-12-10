@@ -12,18 +12,30 @@ public class getInput {
     public static boolean valid = false;// flag to indicate if valid character entered
     public static int numberIn = 0;
     public static char[] guess;
+    public static boolean isLetter = false;
     
     public static int number(int max) {
      
     Scanner scanNumber = new Scanner(System.in); 
+       try { 
     do {
-    numberIn = scanNumber.nextInt(); } 
-    while(validateNumber(numberIn, max) == false);
+  
+    numberIn = scanNumber.nextInt();  
+ 
+    }
+    while(validateNumber(numberIn, max) == false || isLetter == true);
+    
+       } catch(Exception e){
+       System.out.println("Really? Try a number this time.");  
+       number(max);
+    }
+    
     return numberIn;
     }
           
         private static boolean validateNumber(int numberIn, int max) {
                
+        
             switch (numberIn) {
                 case 1:  valid = true; break;
                 case 2:  valid = true; break;
@@ -36,7 +48,8 @@ public class getInput {
                 case 9:  valid = true; break;
                 case 0:  valid = true; break;    
            default:  System.out.println("Invalid number.");
-                    number(max);
+                    
+                    valid = false;
                     break; }
             if (numberIn > max){
                 valid = false;

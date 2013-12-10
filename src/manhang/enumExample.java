@@ -13,8 +13,8 @@ import static manhang.Menu.win;
 public enum enumExample {
 
     
-        LOSS("0");
+        LOSS("0"),
         WIN("1");
-      
+      public int LOSS;
 
 }
