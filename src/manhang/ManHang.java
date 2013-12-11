@@ -28,13 +28,13 @@ public class ManHang {
  
  public static void main(String[] args) {
      
-     try{
+//     try{
  splash.splashScrene();
      Menu.startMenu();
-}
-catch(Exception e){
-System.out.println("it broke");
-}
+//}
+//catch(Exception e){
+//System.out.println("it broke");
+//}
      
      
     }

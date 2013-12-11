@@ -4,6 +4,7 @@
  */
 package manhang;
 import java.util.Scanner;
+import static manhang.getInput.number;
 /**
  *
  * @author Andrew
@@ -16,11 +17,17 @@ public static char guess(){
 Scanner scanner = new Scanner(System.in);
 String guessStr = scanner.nextLine();
 char guessChr = Character.toUpperCase(guessStr.charAt(0));
-
+ try { 
 while(validGuess(guessChr) == false){
 guessStr = scanner.nextLine();
 guessChr = Character.toUpperCase(guessStr.charAt(0));
 }
+} catch(Exception e){
+       System.out.println("Really? Try a letter this time.");  
+       guess();
+    }
+
+
 return guessChr;
 }
 
