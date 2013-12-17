@@ -29,6 +29,7 @@ public class ManHang {
  public static void main(String[] args) {
      
 //     try{
+     new MainFrame();
  splash.splashScrene();
      Menu.startMenu();
 //}

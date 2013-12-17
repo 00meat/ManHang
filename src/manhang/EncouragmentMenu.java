@@ -145,7 +145,7 @@ public class EncouragmentMenu extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-                        jTextArea1.setText("Too hard? You might want to try an easier difficulty... Really.");");
+                        jTextArea1.setText("Too hard? You might want to try an easier difficulty... Really.;");
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
