@@ -29,9 +29,13 @@ public class ManHang {
  public static void main(String[] args) {
      
 //     try{
-     new MainFrame();
+   new MainFrame();
  splash.splashScrene();
      Menu.startMenu();
+     
+   //  MainFrame popup = new MainFrame();
+    //    popup.setVisible(true);
+     
 //}
 //catch(Exception e){
 //System.out.println("it broke");
